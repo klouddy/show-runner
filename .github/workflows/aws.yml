@@ -27,15 +27,16 @@
 name: Deploy to Amazon ECS
 
 on:
+  pull_request:  
   push:
     branches: [ "main" ]
 
 env:
-  AWS_REGION: us-east-q                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: "913846010507.dkr.ecr.us-east-1.amazonaws.com"
+  AWS_REGION: us-east-1                # set this to your preferred AWS region, e.g. us-west-1
+  ECR_REPOSITORY: show-runner
   ECS_SERVICE: "show-runner-service"                 # set this to your Amazon ECS service name
   ECS_CLUSTER: "show-runner-cluster"                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: task_definision.json
+  ECS_TASK_DEFINITION: task_def.json
   CONTAINER_NAME: show-runner
 
 permissions:
