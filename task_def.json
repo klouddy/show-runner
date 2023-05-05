@@ -1,0 +1,78 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:913846010507:task-definition/show-runner:1",
+  "containerDefinitions": [
+    {
+      "name": "show-runner",
+      "image": "913846010507.dkr.ecr.us-east-1.amazonaws.com/show-runner:latest",
+      "cpu": 0,
+      "portMappings": [
+        {
+          "name": "show-runner-5000-tcp",
+          "containerPort": 5000,
+          "hostPort": 5000,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/show-runner",
+          "awslogs-create-group": "true",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "family": "show-runner",
+  "executionRoleArn": "arn:aws:iam::913846010507:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  "placementConstraints": [],
+  "compatibilities": ["EC2", "FARGATE"],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2023-05-05T18:19:11.547Z",
+  "registeredBy": "arn:aws:sts::913846010507:assumed-role/AWSReservedSSO_AdministratorAccess_24dce67315294b28/jromero@captechventures.com",
+  "tags": []
+}

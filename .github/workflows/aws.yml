@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: show-runner
   ECS_SERVICE: "show-runner-service"                 # set this to your Amazon ECS service name
   ECS_CLUSTER: "show-runner-cluster"                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: task_definision.json
+  ECS_TASK_DEFINITION: task_def.json
   CONTAINER_NAME: show-runner
 
 permissions:
